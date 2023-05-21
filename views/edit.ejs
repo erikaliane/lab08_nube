@@ -29,9 +29,9 @@
 <% if (producto) { %>
 <div class="container mt-4">
     <div class="card border-secondary">
-        <div class="card-header">Nuevo Registro</div>
+        <div class="card-header">Editar Producto</div>
         <div class="card-body">
-            <form action="/update" method="POST">
+            <form action="/update" method="POST" enctype="multipart/form-data">
                 
                 <div class="mb-3">
                 <label for="producto" class="form-laber">ID</label>
@@ -54,8 +54,17 @@
                  </div>
                  <div class="mb-3">
                   <label for="producto" class="form-laber">Marca</label>
-                  <input type="text" class="form-control" id="marca" name="marca" tabinex="1">
+                  <input type="text" class="form-control" id="marca" name="marca" value="<%= producto.marca %>" tabinex="1">
                </div> 
+               <div class="mb-3">
+                <label for="producto" class="form-laber">Imagen Actual</label>
+                <input type="text" class="form-control" id="imagen" name="imagen" value="<%= producto.imagen %>"
+                       tabindex="1" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="file" class="form-laber">Seleccionar nueva imagen</label>
+                <input type="file" name="file" id="file" tabindex="1">
+            </div>
                  <button type="submit" class="btn btn-success" tabinex="5">Guardar</button>
                  <a href="/" class="btn btn-secondary">Cancelar</a>
 

@@ -39,7 +39,7 @@
                     <th scope="col">PRECIO</th>
                     <th scope="col">MARCA</th>
                     <th scope="col">CANTIDAD</th>
-
+                    <th scope="col">IMAGEN</th>
                     <th scope="col">ACCIONES</th>
                 </tr>
             </thead>
@@ -52,8 +52,13 @@
                     <td><%= producto.marca %> </td>
                     <td><%= producto.cantidad %> </td>
                     <td>
-                      <a href="/edit/<%= producto.id %>" class="btn btn-outline-success"><img src="img/per.png" > </a>
-                      <a href="/delete/<%= producto.id %>" class="btn btn-outline-danger">borrar</a>
+
+                      <img src="https://lab9ventura.s3.amazonaws.com/<%= producto.imagen %>" alt="<%= producto.imagen %>" height="50">
+                      <%= producto.imagen %> 
+                    </td>
+                    <td>
+                      <a href="/edit/<%= producto.id %>" class="btn btn-outline-success">Editar </a>
+                      <a href="/delete/<%= producto.id %>" class="btn btn-outline-danger">Eliminar</a>
                     </td>
                 </tr>
 

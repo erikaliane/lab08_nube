@@ -31,7 +31,7 @@
     <div class="card border-secondary">
         <div class="card-header">Nuevo Registro</div>
         <div class="card-body">
-            <form action="/save" method="POST">
+            <form action="/save" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                 <label for="producto" class="form-laber">ID</label>
                 <input type="number" class="form-control" id="id_producto" name="id_producto" tabinex="1">
@@ -55,6 +55,13 @@
                   <label for="producto" class="form-laber">Marca</label>
                   <input type="text" class="form-control" id="marca" name="marca" tabinex="1">
                </div>
+               <div class="mb-3">
+                
+                
+                <input type="file" name="file" id="file"/>
+              
+             
+             </div>
                  <button type="submit" class="btn btn-success" tabinex="5">Guardar</button>
                  <a href="/" class="btn btn-secondary">Cancelar</a>
 
